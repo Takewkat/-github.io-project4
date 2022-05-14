@@ -1,2 +1,2 @@
-# -github.io-project4
+# github.io-project4
 SEO: HTML + CSS/SCSS + JS/libs
