@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Agence La Panthère - Agence web basée à Lyon"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page">
+				<!-- bloc-1-presentation -->
+				<section class="_parallax">
+					<div class="presentation">
+						<img class="presentation__logo" src="./img/logo.png" alt="logo">
+						<h1 class="presentation__title">Agence La Panthère</h1>
+						<button class="btn__contact">CONTACT</button>
+					</div>										
+				</section>
+				<!-- bloc-1-presentation END -->
+				<!-- bloc-2-services -->
+				<section class="services _container">
+					<div class="services__description">L'agence La Panthère est une agence de web design qui aide les entreprises à devenir attractives et visbles sur Internet</div>
+					<div class="services__box">
+						<div class="services__box__item _item1">
+							<img class="services__box__item-img" src="./img/icons/window.svg" alt="">
+							<img class="services__box__item-img1" src="./img/icons/bars.svg" alt="">
+							<img class="services__box__item-img2" src="./img/icons/rectangle-portrait.svg" alt="">
+							<h3 class="services__box__item-title">WEB DESIGN</h3>
+							<div class="services__box__item-text">Que vous ayez un site web qui a besoin d’un rafraîchissement ou que vous partiez de zéro, laissez-nous vous réaliser un design dont vous serez fier. </div>
+						</div>					
+						<div class="services__box__item _item2">
+							<img class="services__box__item-img" src="./img/icons/presentation.svg" alt="">
+							<img class="services__box__item-img0" src="./img/icons/chart-line.svg" alt="">
+							<h3 class="services__box__item-title">STRATÉGIE</h3>
+							<div class="services__box__item-text">Plutôt que de suggérer des designs à la mode, nous travaillerons avec vous pour comprendre vos objectifs commerciaux afin de vous proposer le meilleur design possible.</div>
+						</div>
+						<div class="services__box__item _item3">
+							<img class="services__box__item-img" src="./img/icons/pen-square.svg" alt="">
+							<h3 class="services__box__item-title">ILLUSTRATIONS</h3>
+							<div class="services__box__item-text">Un bon design n'est rien sans de bonnes illustrations. Laissez faire notre équipe de graphistes talentueux pour donner à vos pages une touche finale d'élégance.</div>
+						</div>
+					</div>
+					<div class="services__quote">
+						<figure>
+							<blockquote>
+									<p>L'agence La Panthère est une excellente agence web! Les web designers ont réussi à capturer l'essence de notre enterprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon.</p>
+							</blockquote>
+							<figcaption>—Maxime Guibard, <cite>PDG de À vos fourchettes</cite></figcaption>
+						</figure>
+					</div>
+				</section>
+				<!-- bloc-2-services END -->
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_js.html',{})
+	</body>
+</html>

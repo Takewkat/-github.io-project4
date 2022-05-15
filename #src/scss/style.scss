@@ -1,0 +1,222 @@
+@use "sass:math";
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: 'Open Sans', sans-serif;
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1420;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #000;
+$whiteColor: #fff;
+$orangeColor: #F3976C;
+$orangeHoverColor: #c27956;
+$greyColor: #40778aa2;
+$greyLightColor: #f7f1f1;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: $mainColor;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1 + px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "lightgallery";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+//===================================================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.presentation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 420px;
+	@media (max-width: $md3 + px) {
+		height: 300px;
+	}
+	&__logo	{
+		width: 100px;
+		height: 100px;
+	}
+	&__title {
+		@include adaptiv-value("font-size", 36, 26, 1);
+		font-weight: bold;
+		color: $orangeColor;
+		background-color: $greyColor;
+		margin: 20px;
+		padding: 8px 12px;
+		border-radius: 50px;
+		text-shadow: 2px 2px 2px rgba(0, 0, 1, 0.844);
+	}
+}
+.services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	gap: 20px;
+	padding: 20px 2px;
+	min-height: 620px;
+	max-width: 900px;
+	&__description {
+		max-width: 640px;
+		text-align: center;
+		@include adaptiv-value("font-size", 30, 20, 1);
+	}
+	&__box {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+		@media (max-width: $md3 + px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+		}
+		&__item {
+			display: grid;
+			grid-template-rows: 1fr 0.5fr 1fr;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			align-items: center;	
+			background-color: $greyLightColor;
+			border-radius: 20px;
+			padding: 12px;
+			&-img {
+				height: 70px;
+				grid-row: 1;
+				grid-column: 1;
+			}
+			&-img0 {
+				height: 37px;
+				justify-self: center;
+				align-self: center;
+				margin-bottom: 20px;
+				grid-row: 1;
+				grid-column: 1;
+			}
+			&-img1 {
+				height: 23px;
+				align-self: center;
+				justify-self: center;
+				margin-top: 20px;
+				margin-left: 20px;
+				grid-row: 1;
+				grid-column: 1;
+			}
+			&-img2 {
+				height: 23px;
+				justify-self: center;
+				align-self: center;
+				margin-left: -35px;				
+				margin-top: 20px;
+				grid-row: 1;
+				grid-column: 1;
+			}
+			&-title {
+				grid-row: 2;
+				grid-column: 1;
+				font-weight: bold;
+				align-self: start;
+			}
+			&-text {
+				grid-row: 3;
+				grid-column: 1;
+				text-align: center;
+				align-self: stretch;
+			}
+		}
+	}
+	&__quote {
+		text-align: center;
+		@include adaptiv-value("font-size", 26, 18, 1);
+	}
+}
+._item1 {
+	grid-row: 1;
+	grid-column: 1;
+}
+._item2 {
+	grid-row: 1;
+	grid-column: 2;
+	@media (max-width: $md3 + px) {
+		grid-row: 2;
+		grid-column: 1;
+	}
+}
+._item3 {
+	grid-row: 1;
+	grid-column: 3;
+	@media (max-width: $md3 + px) {
+		grid-row: 3;
+		grid-column: 1;
+	}
+}

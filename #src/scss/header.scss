@@ -1,0 +1,21 @@
+//====================================================================================================
+.header {
+	position: relative;
+	// .header__content
+	&__content {
+		max-width: 1294px;
+		height: 94px;
+		padding: 20px 200px;
+		margin: 0px auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+		}
+	}
+	&_svg {
+		height: 50px;
+		width: 250px;
+	}
+}
