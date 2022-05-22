@@ -2,19 +2,12 @@
 //<МИКСИНЫ>===============================================================================================
 @import "mixins";
 //</МИКСИНЫ>===============================================================================================
-
 //<ШРИФТЫ>===============================================================================================
-
-//<Подключаем шрифты>=======================================================================================
-//&display=swap&subset=cyrillic-ext
 @import "fonts";
-//</Подключаем шрифты>=======================================================================================
-
 //<Шрифт по умолчанию>==========================================================================================
 $fontFamily: 'Open Sans', sans-serif;
 $fontSize: 16;
 //</Шрифт по умолчанию>==========================================================================================
-
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
@@ -29,9 +22,10 @@ $md4: 479.98;
 $mainColor: #000;
 $whiteColor: #fff;
 $orangeColor: #F3976C;
-$orangeHoverColor: #c27956;
+$orangeHoverColor: #f45702;
 $greyColor: #40778aa2;
 $greyLightColor: #f7f1f1;
+$blueColor: #39b2ea7d;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -91,9 +85,17 @@ body {
 .page {
 	flex: 1 1 auto;
 }
+._bcg-style {
+	margin: 20px;
+	padding: 8px 12px;
+	border-radius: 50px;
+}
+.slider {
+	margin: 0 0 50px 0;
+}
 //===================================================================================================================================
 
-//</ОСНОВНОЙ БЛОК>====================================================================================================
+//</PRESENTATION>====================================================================================================
 .presentation {
 	display: flex;
 	flex-direction: column;
@@ -102,6 +104,9 @@ body {
 	height: 420px;
 	@media (max-width: $md3 + px) {
 		height: 300px;
+	}
+	&__parallax {
+		background-image: url("../img/agence-la-panthere.webp");
 	}
 	&__logo	{
 		width: 100px;
@@ -112,12 +117,11 @@ body {
 		font-weight: bold;
 		color: $orangeColor;
 		background-color: $greyColor;
-		margin: 20px;
-		padding: 8px 12px;
-		border-radius: 50px;
 		text-shadow: 2px 2px 2px rgba(0, 0, 1, 0.844);
+		text-align: center;
 	}
 }
+//</SERVICES>====================================================================================================
 .services {
 	display: flex;
 	flex-direction: column;
@@ -131,6 +135,7 @@ body {
 		max-width: 640px;
 		text-align: center;
 		@include adaptiv-value("font-size", 30, 20, 1);
+		background-color: $blueColor;
 	}
 	&__box {
 		display: grid;
@@ -150,6 +155,9 @@ body {
 			background-color: $greyLightColor;
 			border-radius: 20px;
 			padding: 12px;
+			&:hover {
+				background-color: $orangeColor;
+			}
 			&-img {
 				height: 70px;
 				grid-row: 1;
@@ -219,4 +227,137 @@ body {
 		grid-row: 3;
 		grid-column: 1;
 	}
+}
+//<WHAT>====================================================================================================
+.what {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 500px;
+	&__parallax {
+		background-image: url("../img/image-de-presentation.webp");
+	}
+	.what__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 70%;
+		height: 80%;
+		background-image: url("../img/texture-paper.webp");
+		background-size: 280px 280px;
+		background-color: rgba(255, 166, 0, 0.448);
+		color: rgb(16, 0, 16);
+		text-align: center;
+		@include adaptiv-value("font-size", 26, 18, 1);
+		row-gap: 20px;
+		@media (max-width: $md3 + px) {
+			max-width: 100%;
+		}
+		&-title {
+			background-color: $blueColor;
+			flex: 1 1 auto;
+			align-items: center;
+			display: flex;
+			text-transform: uppercase;
+			padding: 20px 40px;
+		}
+		&-text {
+			padding: 0 20px;
+		}
+		&-link {
+			color: $whiteColor;
+			text-decoration: underline;
+			@include adaptiv-value("padding-bottom", 30, 16, 1);
+			font-weight: 600;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}	
+}
+//<PORTFOLIO>====================================================================================================
+.portfolio {
+	text-align: center;
+	background-image: url("../img/lines-h2-bg.png");
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+	&__title {
+		@include adaptiv-value("font-size", 30, 20, 1);
+	}
+}
+.gallery-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	&__item {
+		position: relative;
+		display: block;
+		text-align: center;
+		&:hover {
+			&::before {
+				content: "+";
+				display: block;
+				font-size: 48px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, .6);
+				color: #FFF;
+				font-weight: 100;
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+			}
+			img {
+				opacity: 0.6;
+			}
+		}		
+	}
+	&__box {
+		flex: 0 1 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+		margin: 20px 40px;
+		max-width: 370px;
+		@media (max-width: $md3 + px) {
+			flex: 0 1 100%;
+			margin: 20px -20px;
+		}
+		&-img {
+			width: 270px;
+			height: 100%;
+			object-fit: cover;
+			@media (max-width: $md3 + px) {
+				width: 100%;
+			}
+		}
+		&-title {
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		&-text {
+		}
+	}
+}
+
+//<CTA>====================================================================================================
+.cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 20px;
+	padding: 40px 0;
+	background-image: url("../img/texture-paper.webp");
+	background-size: 280px 280px;
 }

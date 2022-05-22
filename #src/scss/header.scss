@@ -5,7 +5,7 @@
 	&__content {
 		max-width: 1294px;
 		height: 94px;
-		padding: 20px 200px;
+		padding: 20px;
 		margin: 0px auto;
 		display: flex;
 		justify-content: center;
@@ -17,5 +17,8 @@
 	&_svg {
 		height: 50px;
 		width: 250px;
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 }

@@ -1,6 +1,5 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 ._parallax {
-  background-image: url("../img/agence-la-panthere.webp");
 	width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -12,121 +11,22 @@ blockquote {
 	font-style: italic;
 	font-weight: 300;
 }
-//</ОСНОВНОЙ БЛОК>====================================================================================================
-ol.counter {
-	list-style-type: none;
-	counter-reset: item;
-	li {
-		position: relative;
-		padding: 0px 0px 0px 45px;
-		&:before {
-			counter-increment: item;
-			content: counter(item);
-			position: absolute;
-			left: 0;
-			top: 0;
-			color: #818181;
-			font-size: 14px;
-			font-weight: 700;
-			text-align: center;
-			line-height: 26px;
-			border-radius: 50%;
-			width: 28px;
-			height: 28px;
-			border: 1px solid #4274bb;
-		}
-	}
+figcaption {
+	@include adaptiv-value("font-size", 20, 16, 1);
+	font-style: italic;
+	font-weight: 300;
+	margin-top: 12px;
 }
-//====================================================================================================
-.ellipsis {
-	display: block;
-	overflow: hidden;
-	width: 100%;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.es {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-//====================================================================================================
-.table {
-	display: table;
-	font-size: 0;
-	width: 100%;
-	//table-layout: fixed;
-}
-.trow {
-	display: table-row;
-}
-.cell {
-	display: table-cell;
-	&.full {
-		width: 100%;
-	}
-}
-//====================================================================================================
-._ibg {
-	position: relative;
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-	}
-}
-body.ie {
-	._ibg {
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	._ibg img {
-		width: 0;
-		height: 0;
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-//====================================================================================================
-// ._more-block
-._more-block {
-}
-// ._more-content
-._more-content {
+._scr-item {
+	transform: translate(0, 40px);
+	opacity: 0;
 	transition: all 0.3s ease 0s;
-	overflow: hidden;
-}
-// ._more-item
-._more-item {
-}
-// ._more-link
-._more-link {
-	cursor: pointer;
-	span {
-		font-style: normal;
-		&:first-child {
-			display: block;
-		}
-		&:last-child {
-			display: none;
-		}
-	}
 	&._active {
-		span {
-			font-style: normal;
-			&:first-child {
-				display: none;
-			}
-			&:last-child {
-				display: block;
-			}
-		}
+		transform: translate(0, 0);
+		opacity: 1;
 	}
 }
+//====================================================================================================
 //====================================================================================================
 %graystyle {
 	transition: all 0.3s ease 0s;
@@ -141,84 +41,3 @@ body.ie {
 	-moz-filter: grayscale(0);
 	-o-filter: grayscale(0);
 }
-//====================================================================================================
-#map {
-	background: url("../img/icons/loading.gif") center / 50px no-repeat;
-}
-//====================================================================================================
-._swiper {
-	overflow: hidden;
-	//.swiper-wrapper
-	.swiper-wrapper {
-		width: 100%;
-		height: 100%;
-		box-sizing: content-box;
-		display: flex;
-		position: relative;
-	}
-	&.swiper-container-vertical {
-		.swiper-wrapper {
-			flex-direction: column;
-		}
-	}
-	&.swiper-container-autoheight {
-		.swiper-wrapper {
-			align-items: flex-start;
-		}
-	}
-}
-.swiper-container-initialized {
-	.swiper-slide {
-		flex-shrink: 0;
-		// transition-property: transform;
-	}
-}
-.swiper-container-android {
-	.swiper-slide,
-	.swiper-wrapper {
-		transform: translate3d(0px, 0, 0);
-	}
-}
-.swiper-button-lock {
-	display: none !important;
-}
-//====================================================================================================
-._tabs {
-}
-._tabs-item {
-}
-._tabs-block {
-	display: none;
-	&._active {
-		display: block;
-	}
-}
-//=====================================================================================================================
-.mirror {
-	transform: scale(-1, 1);
-}
-//=====================================================================================================================
-.nicescroll-rails {
-	z-index: 1000 !important;
-}
-//========================================================================================================================================================
-
-//========================================================================================================================================================
-._custom-scroll {
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 3px;
-	height: 100%;
-	z-index: 1000;
-	//background-color: rgba(0, 0, 0, 0.1);
-	&__line {
-		background-color: rgba(0, 0, 0, 0.5);
-		border-radius: 3px 0 0 3px;
-		position: relative;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
-}
-//</ГОТОВЫЕ КЛАССЫ>====================================================================================================

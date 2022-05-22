@@ -42,12 +42,44 @@
 		</nav>
 	</div>
 </header>
-			<main class="page">
-
+			<main class="page page__form">
+				<!-- bloc-6 -->
+				<section class="intro__container"> 
+					<div class="intro _container">
+						<h2 class="intro__title">Parlons web design !</h2>
+						<div class="intro__text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+							Parlez-nous de votre projet en complétant le formulaire ci-dessous.</div>
+					</div>
+				</section>
+				<!-- bloc-6 END -->
+				<!-- bloc-7 -->
+				<section class="form">
+					<form action="" id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+						<div class="form__container _container">
+							<label for="name" required id="name" class="form__label">Nom</label>
+							<input type="text" required id="name" class="form__input">
+							<label for="email" class="form__label">Adresse email</label>
+							<input type="email" required id="email" class="form__input _email">
+							<label for="subject" class="form__label">Comment nous avez-vous connu ?</label>
+							<input type="text" required id="input_504" class="form__input">
+							<label for="message" class="form__label">Brief de votre projet (Ajoutez autant de détails que nécessaire)</label>
+							<textarea required id="message" class="form__textarea" rows="4" cols="50"></textarea>
+					</form>
+					<button type="submit" class="form__btn btn">ENVOYER</button>
+				</section>
+				<!-- bloc-7 END -->
 			</main>
 			<footer class="footer">
 	<div class="footer__container _container">
-
+		<p class="footer__container-text">Agence La Panthère - Agence web basée à Lyon</p>
+		<div class="footer__container-social">
+			<img src="./img/icons/twitter.svg" alt="twi" class="footer__container-social-img">
+			<img src="./img/icons/facebook-f.svg" alt="twi" class="footer__container-social-img">
+			<img src="./img/icons/dribbble.svg" alt="twi" class="footer__container-social-img">
+			<img src="./img/icons/instagram.svg" alt="twi" class="footer__container-social-img">
+		</div>
+		<div class="footer__container-contact">CONTACT: @agencelapanthere.com <br>2 place Sathonay 69001 Lyon<br>
+			Ouvert de 9h à 18h, du lundi au vendredi</div>
 	</div>
 </footer>
 		</div>
