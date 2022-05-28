@@ -22,7 +22,7 @@ section {
 }
 
 html {
-  font-size: 16px;
+  font-size: 16;
 }
 
 html,
@@ -105,7 +105,9 @@ body._lock {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
 ._container {
   max-width: 1170px;
   margin: 0 auto;
@@ -199,6 +201,8 @@ textarea.input {
 blockquote {
   font-style: italic;
   font-weight: 300;
+  line-height: 150%;
+  padding: 40px 0 20px 0;
 }
 
 figcaption {
@@ -1264,80 +1268,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
 }
 
-.popup {
-  -webkit-overflow-scrolling: touch;
-  z-index: 100;
-  padding: 30px 10px;
-  position: fixed;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: visibility 0.8s ease 0s;
-  visibility: hidden;
-}
-.popup::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease 0s;
-}
-.popup.show {
-  visibility: visible;
-  overflow: auto;
-}
-.popup.show::before {
-  opacity: 1;
-}
-.popup.show .popup__body {
-  transform: scale(1);
-}
-.popup._active {
-  overflow: auto;
-  visibility: visible;
-}
-.popup._active::before {
-  opacity: 1;
-}
-.popup._active .popup__body {
-  transition: all 0.3s ease 0.2s;
-  transform: scale(1);
-}
-.popup__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%;
-  flex: 1 1 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.popup__body {
-  transform: scale(0);
-  transition: all 0.3s ease 0s;
-  background-color: #fff;
-  padding: 50px;
-  width: 100%;
-  max-width: 800px;
-}
-.popup__close {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  cursor: pointer;
-  z-index: 30;
-  background: url("../img/icons/close.svg") 0 0 no-repeat;
-}
-
 .header {
   position: relative;
 }
@@ -1511,9 +1441,9 @@ footer {
 }
 
 ._bcg-style {
-  margin: 20px;
-  padding: 8px 12px;
-  border-radius: 50px;
+  margin: 20px 0;
+  padding: 12px;
+  border-radius: 12px;
 }
 
 .slider {
@@ -1564,14 +1494,15 @@ footer {
   max-width: 900px;
 }
 .services__description {
-  max-width: 640px;
   text-align: center;
-  font-size: 30px;
+  line-height: 150%;
+  color: rgb(67, 67, 67);
+  font-size: 26px;
   background-color: rgba(57, 178, 234, 0.4901960784);
 }
 @media (max-width: 1170px) {
   .services__description {
-    font-size: calc(20px + 10 * ((100vw - 320px) / 850));
+    font-size: calc(20px + 6 * ((100vw - 320px) / 850));
   }
 }
 .services__box {
@@ -1694,12 +1625,13 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 70%;
+  max-width: 80%;
   height: 80%;
   background-image: url("../img/texture-paper.webp");
   background-size: 280px 280px;
   background-color: rgba(255, 166, 0, 0.448);
   color: rgb(16, 0, 16);
+  border-radius: 12px;
   text-align: center;
   font-size: 26px;
   row-gap: 20px;
@@ -1720,10 +1652,13 @@ footer {
   align-items: center;
   display: flex;
   text-transform: uppercase;
+  font-weight: 600;
   padding: 20px 40px;
+  border-radius: 12px 12px 0 0;
 }
 .what .what__box-text {
   padding: 0 20px;
+  line-height: 120%;
 }
 .what .what__box-link {
   color: #fff;
@@ -1817,6 +1752,10 @@ footer {
   text-transform: uppercase;
   font-weight: 600;
 }
+.gallery-block__box-text {
+  line-height: 150%;
+}
+
 .cta {
   display: flex;
   flex-direction: column;

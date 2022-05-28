@@ -1,4 +1,3 @@
-//<ОСНОВНОЙ БЛОК>====================================================================================================
 ._parallax {
 	width: 100%;
   /* Create the parallax scrolling effect */
@@ -10,6 +9,8 @@
 blockquote {	
 	font-style: italic;
 	font-weight: 300;
+	line-height: 150%;
+	padding: 40px 0 20px 0;
 }
 figcaption {
 	@include adaptiv-value("font-size", 20, 16, 1);
