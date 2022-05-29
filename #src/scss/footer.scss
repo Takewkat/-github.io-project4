@@ -9,7 +9,7 @@ footer {
     text-align: center;
     align-items: center;
     padding: 20px 0;
-    color: $whiteColor;
+    color: $contrastColor;
     @media (max-width: $md3 + px) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr;

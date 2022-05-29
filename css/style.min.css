@@ -227,8 +227,8 @@ figcaption {
   opacity: 1;
 }
 
-._white {
-  color: #fff;
+._color {
+  color: #024478;
 }
 
 .lg-actions .lg-next,
@@ -1308,7 +1308,7 @@ footer {
   text-align: center;
   align-items: center;
   padding: 20px 0;
-  color: #fff;
+  color: #024478;
 }
 @media (max-width: 767.98px) {
   .footer__container {
@@ -1375,6 +1375,7 @@ footer {
 }
 .intro__text {
   font-size: 20px;
+  line-height: 150%;
 }
 @media (max-width: 1170px) {
   .intro__text {
@@ -1387,8 +1388,9 @@ footer {
   padding: 50px 100px;
   border-top: 10px solid #f45702;
   display: grid;
-  gap: 10px;
+  gap: 2px;
   font-weight: 300;
+  line-height: 150%;
   text-transform: uppercase;
   font-size: 22px;
 }
@@ -1402,15 +1404,19 @@ footer {
     padding: 20px;
   }
 }
+.form__label-hint {
+  color: rgb(67, 67, 67);
+  font-size: 14px;
+}
 .form__input, .form__textarea {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   border: none;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   background: #f8f4e5;
   padding-left: 5px;
   outline: none;
-  width: 60%;
+  width: 80%;
 }
 @media (max-width: 767.98px) {
   .form__input, .form__textarea {
@@ -1422,7 +1428,7 @@ footer {
   padding: 0 20px;
   border: none;
   background: #f45702;
-  color: #fff;
+  color: #0C2740;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
   border-bottom: 2px solid transparent;
@@ -1530,11 +1536,13 @@ footer {
 }
 .services__box__item-img {
   height: 70px;
+  width: auto;
   grid-row: 1;
   grid-column: 1;
 }
 .services__box__item-img0 {
   height: 37px;
+  width: auto;
   justify-self: center;
   align-self: center;
   margin-bottom: 20px;
@@ -1543,6 +1551,7 @@ footer {
 }
 .services__box__item-img1 {
   height: 23px;
+  width: auto;
   align-self: center;
   justify-self: center;
   margin-top: 20px;
@@ -1552,6 +1561,7 @@ footer {
 }
 .services__box__item-img2 {
   height: 23px;
+  width: auto;
   justify-self: center;
   align-self: center;
   margin-left: -35px;

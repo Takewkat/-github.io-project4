@@ -4,6 +4,7 @@
 //==========================================================================================
 $fontFamily: 'Open Sans', sans-serif;
 $fontSize: 16px;
+$fontSizeSmall: 14px;
 
 //<VARIABLES>==========================================================================================================
 $minWidth: 320px;
@@ -17,6 +18,8 @@ $md4: 479.98;
 $mainColor: #000;
 $whiteColor: #fff;
 $orangeColor: #F3976C;
+$contrastColor: #024478;
+$contrastColor2: #0C2740;
 $orangeHoverColor: #f45702;
 $greyColor: #40778aa2;
 $greyDarkColor: rgb(67, 67, 67);
@@ -141,11 +144,13 @@ body {
 			}
 			&-img {
 				height: 70px;
+				width: auto;
 				grid-row: 1;
 				grid-column: 1;
 			}
 			&-img0 {
 				height: 37px;
+				width: auto;
 				justify-self: center;
 				align-self: center;
 				margin-bottom: 20px;
@@ -154,6 +159,7 @@ body {
 			}
 			&-img1 {
 				height: 23px;
+				width: auto;
 				align-self: center;
 				justify-self: center;
 				margin-top: 20px;
@@ -163,6 +169,7 @@ body {
 			}
 			&-img2 {
 				height: 23px;
+				width: auto;
 				justify-self: center;
 				align-self: center;
 				margin-left: -35px;				
