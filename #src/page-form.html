@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
-	@@include('_head.html',{
-	"title":"Agence La Panthère - Agence web basée à Lyon - contact"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page page__form">
-				<!-- bloc-6 -->
-				<section class="intro__container"> 
-					<div class="intro _container">
-						<h2 class="intro__title">Parlons web design !</h2>
-						<div class="intro__text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
-							Parlez-nous de votre projet en complétant le formulaire ci-dessous.</div>
-					</div>
-				</section>
-				<!-- bloc-6 END -->
-				<!-- bloc-7 -->
-				<div class="form">
-					<form method="post" id="form_1">
-						<div class="form__container _container">
-							<label for="name" required class="form__label">Nom</label>
-							<input type="text" required id="name" class="form__input">
-							<label for="email" class="form__label">Adresse email</label>
-							<input type="email" required id="email" class="form__input _email">
-							<label for="input_504" class="form__label">Comment nous avez-vous connu ?</label>
-							<input type="text" required id="input_504" class="form__input">
-							<label for="message" class="form__label">Brief de votre projet (Ajoutez autant de détails que nécessaire)</label>
-							<textarea required id="message" class="form__textarea" rows="4" cols="50"></textarea>
-							<button type="submit" class="form__btn btn">ENVOYER</button>
-						</div>
-					</form>					
+@@include('_head.html',{
+"title":"Agence La Panthère - Agence web basée à Lyon - contact"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page page__form">
+			<!-- bloc-6 -->
+			<section class="intro__container">
+				<div class="intro _container">
+					<h2 class="intro__title">Parlons web design !</h2>
+					<div class="intro__text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+						Parlez-nous de votre projet en complétant le formulaire ci-dessous.</div>
 				</div>
-				<!-- bloc-7 END -->
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_js.html',{})
-	</body>
+			</section>
+			<!-- bloc-6 END -->
+			<!-- bloc-7 -->
+			<div class="form">
+				<form method="post" id="form_1">
+					<div class="form__container _container">
+						<label for="name" class="form__label">Nom</label>
+						<input type="text" required id="name" class="form__input">
+						<label for="email" class="form__label">Adresse email</label>
+						<input type="email" required id="email" class="form__input _email">
+						<label for="input_504" class="form__label">Comment nous avez-vous connu ?</label>
+						<input type="text" required id="input_504" class="form__input">
+						<label for="message" class="form__label">Brief de votre projet (Ajoutez autant de détails que
+							nécessaire)</label>
+						<textarea required id="message" class="form__textarea" rows="4" cols="50"></textarea>
+						<button type="submit" class="form__btn btn">ENVOYER</button>
+					</div>
+				</form>
+			</div>
+			<!-- bloc-7 END -->
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
 </html>
