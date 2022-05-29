@@ -2,7 +2,6 @@
 .page__form {
   background-image: url("../img/image-form.webp");
   background-size: cover;
-  @include adaptiv-value("max-height", 690, 660, 1);
 }
 .intro {
   display: flex;

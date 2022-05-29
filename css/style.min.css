@@ -22,7 +22,7 @@ section {
 }
 
 html {
-  font-size: 16;
+  font-size: 16px;
 }
 
 html,
@@ -225,6 +225,10 @@ figcaption {
 ._scr-item._active {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+._white {
+  color: #fff;
 }
 
 .lg-actions .lg-next,
@@ -1349,12 +1353,6 @@ footer {
 .page__form {
   background-image: url("../img/image-form.webp");
   background-size: cover;
-  max-height: 690px;
-}
-@media (max-width: 1170px) {
-  .page__form {
-    max-height: calc(660px + 30 * ((100vw - 320px) / 850));
-  }
 }
 
 .intro {
@@ -1405,7 +1403,7 @@ footer {
   }
 }
 .form__input, .form__textarea {
-  margin-bottom: 32;
+  margin-bottom: 32px;
   border: none;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
