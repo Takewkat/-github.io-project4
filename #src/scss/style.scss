@@ -144,13 +144,13 @@ body {
 			}
 			&-img {
 				height: 70px;
-				width: auto;
+				width: 100%;
 				grid-row: 1;
 				grid-column: 1;
 			}
 			&-img0 {
 				height: 37px;
-				width: auto;
+				width: 100%;
 				justify-self: center;
 				align-self: center;
 				margin-bottom: 20px;
@@ -159,7 +159,7 @@ body {
 			}
 			&-img1 {
 				height: 23px;
-				width: auto;
+				width: 100%;
 				align-self: center;
 				justify-self: center;
 				margin-top: 20px;
@@ -169,7 +169,7 @@ body {
 			}
 			&-img2 {
 				height: 23px;
-				width: auto;
+				width: 100%;
 				justify-self: center;
 				align-self: center;
 				margin-left: -35px;				

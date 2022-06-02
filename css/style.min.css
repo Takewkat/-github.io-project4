@@ -1536,13 +1536,13 @@ footer {
 }
 .services__box__item-img {
   height: 70px;
-  width: auto;
+  width: 100%;
   grid-row: 1;
   grid-column: 1;
 }
 .services__box__item-img0 {
   height: 37px;
-  width: auto;
+  width: 100%;
   justify-self: center;
   align-self: center;
   margin-bottom: 20px;
@@ -1551,7 +1551,7 @@ footer {
 }
 .services__box__item-img1 {
   height: 23px;
-  width: auto;
+  width: 100%;
   align-self: center;
   justify-self: center;
   margin-top: 20px;
@@ -1561,7 +1561,7 @@ footer {
 }
 .services__box__item-img2 {
   height: 23px;
-  width: auto;
+  width: 100%;
   justify-self: center;
   align-self: center;
   margin-left: -35px;
