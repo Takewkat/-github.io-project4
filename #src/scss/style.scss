@@ -260,7 +260,6 @@ body {
 		}
 		&-link {
 			color: $whiteColor;
-			text-decoration: underline;
 			@include adaptiv-value("padding-bottom", 30, 16, 1);
 			font-weight: 600;
 			&:hover {
