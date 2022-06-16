@@ -1584,6 +1584,7 @@ footer {
 .services__quote {
   text-align: center;
   font-size: 26px;
+  padding-bottom: 40px;
 }
 @media (max-width: 1170px) {
   .services__quote {
@@ -1624,6 +1625,7 @@ footer {
   align-items: center;
   justify-content: center;
   min-height: 500px;
+  line-height: 200%;
 }
 .what__parallax {
   background-image: url("../img/image-de-presentation.webp");
@@ -1637,10 +1639,11 @@ footer {
   height: 80%;
   background-image: url("../img/texture-paper.webp");
   background-size: 280px 280px;
-  background-color: rgba(255, 166, 0, 0.448);
+  background-color: rgba(255, 242, 218, 0.254);
   color: rgb(16, 0, 16);
   border-radius: 12px;
   text-align: center;
+  padding-bottom: 30px;
   font-size: 26px;
   row-gap: 20px;
 }
@@ -1675,7 +1678,7 @@ footer {
 }
 @media (max-width: 1170px) {
   .what .what__box-link {
-    padding-bottom: calc(16px + 14 * ((100vw - 320px) / 850));
+    padding-bottom: calc(20px + 10 * ((100vw - 320px) / 850));
   }
 }
 .what .what__box-link:hover {

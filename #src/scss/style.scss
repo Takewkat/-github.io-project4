@@ -194,6 +194,7 @@ body {
 	&__quote {
 		text-align: center;
 		@include adaptiv-value("font-size", 26, 18, 1);
+		padding-bottom: 40px;
 	}
 }
 ._item1 {
@@ -223,6 +224,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 500px;
+	line-height: 200%;
 	&__parallax {
 		background-image: url("../img/image-de-presentation.webp");
 	}
@@ -235,10 +237,11 @@ body {
 		height: 80%;
 		background-image: url("../img/texture-paper.webp");
 		background-size: 280px 280px;
-		background-color: rgba(255, 166, 0, 0.448);
+		background-color: rgba(255, 242, 218, 0.254);
 		color: rgb(16, 0, 16);
 		border-radius: 12px;
 		text-align: center;
+		padding-bottom: 30px;
 		@include adaptiv-value("font-size", 26, 18, 1);
 		row-gap: 20px;
 		@media (max-width: $md3 + px) {
@@ -260,7 +263,7 @@ body {
 		}
 		&-link {
 			color: $whiteColor;
-			@include adaptiv-value("padding-bottom", 30, 16, 1);
+			@include adaptiv-value("padding-bottom", 30, 20, 1);
 			font-weight: 600;
 			&:hover {
 				transform: scale(1.1);
